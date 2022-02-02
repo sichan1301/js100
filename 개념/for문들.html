@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <script>
+
+        let array = [10,20,30,40,50];
+
+        array.forEach(e=>console.log(e*3));   // 연산할때 사용
+
+        for(const data in array){               //for in문에서의 data는 array의 index
+            document.write(array[data], ' ');
+        }
+
+        for(const data of array){           //for of문에서의 data는 array의 요소 (파이썬의 for in 문과 같음)
+            document.write(data, '<br>');
+        }
+    </script>
+</body>
+</html>
