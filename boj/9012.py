@@ -5,7 +5,7 @@ for i in range(int(input())):
         if j == "(":
             stack.append(j)
         else:
-            if len(stack)>0:   #stack:
+            if stack:   #len(stack)>0
                 stack.pop()
             else:
                 isVps = False
