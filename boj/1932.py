@@ -17,3 +17,4 @@ for i in range(1,n):
         d[i][j] = max(left,right) + l[i][j]
 ans = max(d[n-1])
 print(ans)
+
