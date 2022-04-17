@@ -2,7 +2,7 @@ import sys
 
 n = int(sys.stdin.readline())
 l =[]
-d = []
+d =[]
 for i in range(n):
     m = list(map(int,sys.stdin.readline().split()))
     l.append(m)
