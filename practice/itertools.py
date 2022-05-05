@@ -8,6 +8,6 @@ for i in combinations(v,2):
 
 # v = [0,1,2,3]
 
-# for i in permutations(v,4):
+# for i in permutations(v):
 #     print(i)
 
