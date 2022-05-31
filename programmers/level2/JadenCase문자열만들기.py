@@ -1,7 +1,9 @@
 def solution(s):
+    s = s.split(' ')
+    capital = []
     for i in s:
-      s = s.split(' ')
-    answer = ''
-    return s
+      capital.append(i.capitalize())
+    answer=' '.join(capital)
+    return answer
 
-print(solution("For The Last Week"))
+print(solution("for the last week"))
