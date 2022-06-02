@@ -6,4 +6,4 @@ def solution(s):
     answer=' '.join(capital)
     return answer
 
-print(solution("for the last week"))
+print(solution("for the last week")) 
