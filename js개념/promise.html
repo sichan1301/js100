@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const promise = new Promise((resolve,reject)=>{
+      console.log('doing something');
+      setTimeout(()=>{
+        resolve('sichan');
+        // reject(new Error('no network'));
+      },2000);
+    });
+
+    promise
+    .then(value =>{
+      console.log(value);
+    })
+    .catch(error=>{
+      console.log(error);
+    })
+    .finally(()=>{
+      console.log('finally');
+    })
+
+    // promise 연결하기
+    const fetchNumber = new Promise((resolve,reject)=>{
+      setTimeout(()=>resolve(1),1000)
+    })
+
+    fetchNumber
+    .then(num => num*2)
+    .then(num => num*3)
+    .then(num => {
+      return new Promise((resolve)=>{
+        setTimeout(()=>resolve(num-1),1000);
+      });
+    })
+    .then(num => console.log(num));
+    
+    </script>
+</body>
+</html>
