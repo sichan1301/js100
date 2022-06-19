@@ -21,4 +21,4 @@ for j in range(10):
   ans += cache[N][j]
   ans %= MOD
 
-print(ans)
+print(ans) 
