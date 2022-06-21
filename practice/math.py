@@ -25,3 +25,7 @@ print(math.factorial(5))
 # 팩토리얼
 
 print(math.gcd(6,8))
+# 최대공약수
+
+print(math.log(10,10))
+# log 10의 10
