@@ -23,3 +23,5 @@ print(math.fabs(-3.14))
 
 print(math.factorial(5))
 # 팩토리얼
+
+print(math.gcd(6,8))
