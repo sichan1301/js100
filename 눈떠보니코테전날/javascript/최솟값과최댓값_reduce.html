@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>최솟값과최댓값_reduce</title>
+</head>
+<body>
+  <script>
+    let a = [6,5,4,3,2];
+    const reducerOne = (accumulator, currentvalue) => accumulator + currentvalue;
+    const reducerTwo = (accumulator, currentvalue) => accumulator - currentvalue;
+    const reducerThree = (accumulator, currentvalue) => accumulator > currentvalue ? accumulator : currentvalue;
+    const reducerFour = (accumulator, currentvalue) => accumulator < currentvalue ? accumulator : currentvalue;
+    
+    console.log(a.reduce(reducerOne));
+    console.log(a.reduce(reducerTwo));
+    console.log(a.reduce(reducerThree));
+    console.log(a.reduce(reducerFour));
+  </script>
+</body>
+</html>
