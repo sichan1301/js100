@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>암호해독!</title>
+</head>
+<body>
+  <script>
+    let data = ['   + -- + - + -   ','   + --- + - +   ','   + -- + - + -   ' ,'   + - + - + - +   ']
+    let result = '';
+
+    for(var s of data){
+      console.log(s.replace(/ /g,'').replace(/\+/g,'1').replace(/-/g,'0')); 
+      // 모든 공백들 없애고, +는 1로, -는 0으로 대체 (+는 정규표현식 문법이 따로 있으므로 역슬래시를 붙여준다)
+      
+      console.log(parseInt(s.replace(/ /g,'').replace(/\+/g,'1').replace(/-/g,'0'),2));
+      // 2진법으로 변환
+
+      result += String.fromCharCode(parseInt(s.replace(/ /g,'').replace(/\+/g,'1').replace(/-/g,'0'),2));
+      // 숫자를 문자로 변환해서 추가
+    }
+    console.log(result);
+
+  </script>
+</body>
+</html>
