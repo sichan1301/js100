@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>최솟값과최댓값_reduce</title>
+</head>
+<body>
+  <script>
+    let a = [6,5,4,3,2];
+    const 더하기 = (accumulator, currentvalue) => accumulator + currentvalue;
+    const 빼기 = (accumulator, currentvalue) => accumulator - currentvalue;
+    const 최댓값 = (accumulator, currentvalue) => accumulator > currentvalue ? accumulator : currentvalue;
+    const 최솟값 = (accumulator, currentvalue) => accumulator < currentvalue ? accumulator : currentvalue;
+    
+    console.log(a.reduce(더하기));
+    console.log(a.reduce(빼기));
+    console.log(a.reduce(최댓값));
+    console.log(a.reduce(최솟값));
+  </script>
+</body>
+</html>
