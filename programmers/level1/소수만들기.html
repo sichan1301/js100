@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>소수 만들기</title>
+</head>
+<body>
+  <script>
+    function isPrime(n){
+        for(let i=2;i<=Math.sqrt(n);i++){
+            if(n%i == 0){
+                return false
+            }
+        }
+        return true
+    }
+
+    function solution(nums){
+        sum = []
+        count = 0
+        for(let i=0;i<nums.length;i++){
+            for(let j=i+1;j<nums.length;j++){
+                for(let k = j+1;k<nums.length;k++){
+                    sum.push(nums[i]+nums[j]+nums[k])
+                }
+            } 
+        } 
+
+        for(var v of sum){
+            if(isPrime(v) === true) {
+                count ++
+            }
+        }
+        return count
+    }
+    
+  </script>
+</body>
+</html>
